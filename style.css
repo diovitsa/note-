@@ -1,0 +1,257 @@
+#wrap{
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: overlay;
+}
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#first{
+    background-color: #F5F5F5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 400px;
+    min-height: 600px;
+    z-index: 2;
+}
+#first .main {
+    padding: 0px 20px 0px 10px;
+}
+#first .header {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 30px;
+    height: 35px;
+    border-bottom: 1px solid darkgrey;
+    justify-content: space-between;
+    background-color: #DCDCDC;
+
+}
+#first .buttons{
+    display: flex;
+}
+#logo{
+    margin:0;
+    font-size: 25px;
+    text-decoration: none;
+    color:#000;
+}
+#logo:hover{
+    color: #FFDA5F;
+}
+
+#first .header span{
+    color:#fff;
+}
+#first #plus, #plus-item{
+    background-image: url(img/plus.png);
+}
+#first #plus:hover, #plus-item:hover{
+    background-image: url(img/plus-hover.png);
+}
+#plus{
+    margin-right: 20px;
+}
+#first #search{
+    background-image: url(img/search.png);
+}
+#first #search:hover{
+    background-image: url(img/search-hover.png);
+}
+
+#first #search, #plus, #back, #save, #addNote, #edit, #plus-item{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+#addNote{
+    background-image: url(img/add-note.png);
+    width:128px;
+    height:128px;
+    margin: 50% auto;
+    opacity: 0.4;
+}
+#addNote:hover{
+    background-image: url(img/add-note-hover.png);
+    opacity: 1;
+}
+#searchInp{
+    width: 350px;
+    height: 35px;
+    font-size: 24px;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+
+
+#second{
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 600px;
+    z-index: 1;
+}
+#back, #save, #edit{
+    background-image: url(img/arrow-left.png);
+    margin-top: 3px;
+
+}
+#back:hover{
+    background-image: url(img/arrow-left-hover.png);
+}
+#save{
+    background-image: url(img/save.png);
+}
+#save:hover{
+    background-image: url(img/save-hover.png);
+}
+#edit{
+    background-image: url(img/edit.png);
+    display: none;
+}
+#second .header{
+    background-color: #FFDA5F;
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    padding: 8px 30px;
+}
+#second .main{
+    width: 400px;
+    height: 549px;
+    text-align: center;
+    background-color: #FFEBCD;
+    position: relative;
+    overflow: overlay;
+    word-wrap: break-word;
+}
+#textArea{
+    width: 400px;
+    height: 514px;
+    background-color: #ffffff00;
+    border: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    resize: none;
+    outline: none;
+}
+#topicHeader{
+    width: 250px;
+    font-size: 18px;
+}
+#plus-item{
+    position: absolute;
+    top:10px; 
+    left:50px;
+}
+#check-list {
+    list-style: url(img/share.png);
+    text-align: left
+}
+.list-unit{
+    font-size: 24px;
+    margin-top: 28px;
+    padding-right: 25px;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+
+
+
+.modal{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+.modal-content{
+    background-color: #fefefe;
+    margin: 45% auto;
+    padding: 10px;
+    border-radius: 3px;
+    width: 300px;
+}
+.close{
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+.modal-content ul {
+   padding: 0;
+}
+.modal-content ul li{
+    margin: 0;
+    list-style: none;
+    padding: 10px 40px;
+	background-image: url("img/text.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+    background-size: 32px;
+    margin: 20px 0;
+}
+.modal-content ul li:nth-of-type(2){
+	background-image: url("img/check.png");
+}
+ul span{
+    font-weight: bold;
+    font-size: 24px;
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+li a:hover{
+    color: #FFDA5F;
+}
+.text, .check {
+    width: 95%;
+    height: 28px;
+    cursor: pointer;
+    word-wrap: break-word;
+    overflow: hidden;
+    margin: 10px 0;
+}
+.text{
+    background-color: #FFEBCD;
+    border-left: 5px solid #FFDA5F;
+    padding: 0px 10px 5px 5px;
+}
+.check{
+    background-color: #FFEBCD;
+    border-left: 5px solid #50E266;
+    padding: 5px 10px 0px 5px;
+
+}
+.text-header, .check-header{
+    font-weight: bold;
+    font-size: 20px;
+}
+.text-content, .check-content{
+    font-size: 16px;
+}
+.text-content, .text-header, .check-content, .check-header{
+    margin: 5px 0;
+}
